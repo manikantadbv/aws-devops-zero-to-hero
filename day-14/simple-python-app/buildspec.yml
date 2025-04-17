@@ -32,5 +32,5 @@ phases:
   artifacts:
     files:
       - '**/*'          # Include all files recursively
-    base-directory: 'day-14/simple-python-app'  # Specify the correct base directory
+    base-directory: './day-14/simple-python-app'  # Specify the correct base directory
 
