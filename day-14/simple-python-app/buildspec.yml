@@ -21,6 +21,10 @@ phases:
       - echo "$DOCKER_REGISTRY_PASSWORD" | docker login -u "$DOCKER_REGISTRY_USERNAME" --password-stdin "$DOCKER_REGISTRY_URL"
       - docker build -t "$DOCKER_REGISTRY_URL/$DOCKER_REGISTRY_USERNAME/simple-python-flask-app:latest" .
       - docker push "$DOCKER_REGISTRY_URL/$DOCKER_REGISTRY_USERNAME/simple-python-flask-app:latest"
+      - echo "Current directory:"
+      - pwd
+      - echo "Listing all files and directories:"
+      - ls -R
   post_build:
     commands:
       - echo "Build completed successfully!"
@@ -28,5 +32,5 @@ phases:
   artifacts:
     files:
       - '**/*'          # Include all files recursively
-    base-directory: '.'  # Use the current directory as the base
+    base-directory: 'simple-python-app'  # Specify the correct base directory
 
