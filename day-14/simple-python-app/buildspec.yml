@@ -27,7 +27,7 @@ phases:
       - echo "Build completed successfully!"
       - echo "Current directory:"
       - pwd
-      - echo "Listing all files and directories:"
+      - echo "Listing files in the current directory:"
       - ls -R
 
 artifacts:
